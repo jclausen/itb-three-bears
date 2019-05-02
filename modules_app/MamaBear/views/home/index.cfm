@@ -1,1 +1,5 @@
-<h1>Welcome to my cool module page!</h1>
+<cfoutput>
+	<div class="jumbotron">
+        <mama-bear></mama-bear>
+    </div>
+</cfoutput>

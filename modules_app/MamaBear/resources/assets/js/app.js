@@ -1,0 +1,1 @@
+Vue.component( "mama-bear", require( "@MamaBear/components/mama-bear" ).default );

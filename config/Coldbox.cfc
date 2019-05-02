@@ -90,6 +90,7 @@
 
 		//Register interceptors as an array, we need order
 		interceptors = [
+			{ class="interceptors.ModuleAssets" }
 		];
 
 		/*

@@ -53,7 +53,7 @@ component {
 	// If true, looks for layouts in the parent first, if not found, then in module. Else vice-versa
 	this.layoutParentLookup = true;
 	// Module Entry Point
-	this.entryPoint			= "BabyBear";
+	this.entryPoint			= "baby-bear";
 	// Inherit Entry Point
 	this.inheritEntryPoint 	= false;
 	// Model Namespace

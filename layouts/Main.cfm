@@ -9,15 +9,8 @@
 	<!---Base URL --->
 	<base href="#event.getHTMLBaseURL()#" />
 	<!---css --->
-    <link rel="stylesheet" type="text/css" href="#correctedElixirPath( "css/app.css" )#" />
-    <!--- If there are any extracted Vue styles, they will be in this file --->
-    <cfscript>
-        if ( getCache( "template" ).getOrSet( "vue-styles", function() {
-            return fileExists( correctedElixirPath( "js/app.css" ) );
-        } ) ) {
-            writeOutput( '<link rel="stylesheet" type="text/css" href="#correctedElixirPath( "js/app.css" )#" />' );
-        }
-    </cfscript>
+	<link rel="stylesheet" type="text/css" href="#correctedElixirPath( "includes/css/app.css" )#" />
+	#prc.assetBag.renderHead()#
 </head>
 <body>
 	
@@ -27,27 +20,16 @@
 	</div>
 
 	<footer class="footer container">
-		<p class="pull-right">
-			<a href="##"><i class="glyphicon glyphicon-arrow-up"></i> Back to top</a>
-		</p>
-		<p>
+		<p class="text-center text-muted">
 			<a href="http://www.coldbox.org">ColdBox Platform</a> is a copyright-trademark software by
 			<a href="http://www.ortussolutions.com">Ortus Solutions, Corp</a>
 		</p>
-		<p>
-			Design thanks to
-			<a href="http://getbootstrap.com/">Twitter Bootstrap</a>
-		</p>
 	</footer>
 	
-	<script type="application/javascript" src="#correctedElixirPath( "js/runtime.js" )#"></script>
-    <script type="application/javascript" src="#correctedElixirPath( "js/vendor.js" )#"></script>
-    <cfloop array="#prc.assetBag.getFooterContent()#" index="assetPath">
-        <cfif right( assetPath, 2 ) EQ "js">
-            <script type="application/javascript" src="#assetPath#"></script>
-        </cfif>
-    </cfloop>
-    <script type="application/javascript" src="#correctedElixirPath( "js/app.js" )#"></script>
+	<script type="application/javascript" src="#correctedElixirPath( "includes/js/runtime.js" )#"></script>
+    <script type="application/javascript" src="#correctedElixirPath( "includes/js/vendor.js" )#"></script>
+	#prc.assetBag.renderFooter()#
+    <script type="application/javascript" src="#correctedElixirPath( "includes/js/app.js" )#"></script>
 </body>
 </html>
 </cfoutput>

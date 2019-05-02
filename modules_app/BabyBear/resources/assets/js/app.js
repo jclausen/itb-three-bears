@@ -1,0 +1,1 @@
+Vue.component( "baby-bear", require( "@BabyBear/components/baby-bear" ).default );

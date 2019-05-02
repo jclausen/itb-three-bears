@@ -29,5 +29,6 @@ module.exports = elixir(function(mix) {
 	// Mix App styles
 	mix.sass( "app.scss" )
 		// Mix JS and VueJS components
-		.vue( "app.js" );
+		.vue( "app.js" )
+		.modules();
 } );
