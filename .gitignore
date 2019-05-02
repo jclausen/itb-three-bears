@@ -19,4 +19,5 @@ modules/*
 **/apidocs/**
 includes/css
 includes/js
+includes/images
 includes/*.json
